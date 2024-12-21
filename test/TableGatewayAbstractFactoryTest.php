@@ -6,7 +6,9 @@ namespace LaminasTest\ApiTools;
 
 use Laminas\ApiTools\TableGatewayAbstractFactory;
 use Laminas\Db\Adapter\Adapter as DbAdapter;
+use Laminas\Db\Adapter\Adapter;
 use Laminas\Db\Adapter\AdapterInterface as DbAdapterInterface;
+use Laminas\Db\Adapter\AdapterInterface;
 use Laminas\Db\Adapter\Platform\PlatformInterface as DbPlatformInterface;
 use Laminas\Db\ResultSet\HydratingResultSet;
 use Laminas\Db\TableGateway\TableGateway;
@@ -19,8 +21,6 @@ use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
 use ReflectionException;
 use ReflectionProperty;
-use Laminas\Db\Adapter\Adapter;
-use Laminas\Db\Adapter\AdapterInterface;
 
 use function class_exists;
 

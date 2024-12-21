@@ -105,7 +105,6 @@ class DbConnectedResourceAbstractFactory implements AbstractFactoryInterface
      *
      * Otherwise, it checks if the service $requestedName\Table exists.
      *
-     * @param  array $config
      * @param  string $requestedName
      * @return bool
      */
@@ -122,7 +121,6 @@ class DbConnectedResourceAbstractFactory implements AbstractFactoryInterface
     /**
      * Retrieve a table gateway instance based on provided configuration.
      *
-     * @param array $config
      * @param string $requestedName
      * @return TableGatewayInterface
      */
@@ -141,7 +139,6 @@ class DbConnectedResourceAbstractFactory implements AbstractFactoryInterface
      *
      * Defaults to 'id' if none is found.
      *
-     * @param array $config
      * @return string
      */
     protected function getIdentifierFromConfig(array $config)
@@ -167,7 +164,6 @@ class DbConnectedResourceAbstractFactory implements AbstractFactoryInterface
      *
      * Defaults to Laminas\Paginator\Paginator.
      *
-     * @param array $config
      * @param string $requestedName
      * @return string
      * @throws ServiceNotCreatedException If the discovered collection class does not exist.
@@ -190,7 +186,6 @@ class DbConnectedResourceAbstractFactory implements AbstractFactoryInterface
      *
      * Defaults to Laminas\ApiTools\DbConnectedResource.
      *
-     * @param array $config
      * @param string $requestedName
      * @return string
      * @throws ServiceNotCreatedException If the discovered resource class

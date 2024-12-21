@@ -122,7 +122,6 @@ class TableGatewayAbstractFactory implements AbstractFactoryInterface
     /**
      * Is the configuration valid?
      *
-     * @param array $config
      * @return bool
      */
     protected function isValidConfig(array $config, ContainerInterface $container)
@@ -158,7 +157,6 @@ class TableGatewayAbstractFactory implements AbstractFactoryInterface
      *
      * Otherwise, the AdapterInterface service is returned.
      *
-     * @param array $config
      * @return AdapterInterface
      */
     protected function getAdapterFromConfig(array $config, ContainerInterface $container)
@@ -186,7 +184,6 @@ class TableGatewayAbstractFactory implements AbstractFactoryInterface
      * retrieved from the HydratorManager; otherwise ArraySerializable
      * will be retrieved.
      *
-     * @param array $config
      * @return HydratorInterface
      */
     protected function getHydratorFromConfig(array $config, ContainerInterface $container)
@@ -202,7 +199,6 @@ class TableGatewayAbstractFactory implements AbstractFactoryInterface
      * If configuration defines an `entity_class`, and the class exists, that
      * value is returned; if no configuration is provided, stdClass is returned.
      *
-     * @param array $config
      * @param string $requestedName
      * @return string Class name of entity
      * @throws ServiceNotCreatedException If the entity class cannot be autoloaded.

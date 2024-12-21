@@ -19,8 +19,8 @@ use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
 use ReflectionException;
 use ReflectionProperty;
-use Zend\Db\Adapter\Adapter;
-use Zend\Db\Adapter\AdapterInterface;
+use Laminas\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\AdapterInterface;
 
 use function class_exists;
 
@@ -171,7 +171,7 @@ class TableGatewayAbstractFactoryTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: class-string}> */
-    public function validConfig(): array
+    public static function validConfig(): array
     {
         return [
             'named_adapter'   => ['Db\NamedAdapter'],

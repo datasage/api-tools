@@ -6,7 +6,9 @@ namespace LaminasTest\ApiTools;
 
 use Laminas\ApiTools\TableGatewayAbstractFactory;
 use Laminas\Db\Adapter\Adapter as DbAdapter;
+use Laminas\Db\Adapter\Adapter;
 use Laminas\Db\Adapter\AdapterInterface as DbAdapterInterface;
+use Laminas\Db\Adapter\AdapterInterface;
 use Laminas\Db\Adapter\Platform\PlatformInterface as DbPlatformInterface;
 use Laminas\Db\ResultSet\HydratingResultSet;
 use Laminas\Db\TableGateway\TableGateway;
@@ -19,8 +21,6 @@ use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
 use ReflectionException;
 use ReflectionProperty;
-use Zend\Db\Adapter\Adapter;
-use Zend\Db\Adapter\AdapterInterface;
 
 use function class_exists;
 
@@ -171,7 +171,7 @@ class TableGatewayAbstractFactoryTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: class-string}> */
-    public function validConfig(): array
+    public static function validConfig(): array
     {
         return [
             'named_adapter'   => ['Db\NamedAdapter'],

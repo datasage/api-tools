@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Laminas\ApiTools;
 
 use Laminas\ApiTools\ApiProblem\Listener\RenderErrorListener;
-use Laminas\ApiTools\Hal\View\HalJsonModel;
 use Laminas\ApiTools\MvcAuth\MvcAuthEvent;
 use Laminas\Mvc\MvcEvent;
 use Laminas\View\Model\JsonModel;
@@ -59,8 +58,7 @@ class Module
     {
         $result = $e->getResult();
         if (
-            ! $result instanceof HalJsonModel
-            && ! $result instanceof JsonModel
+            ! $result instanceof JsonModel
         ) {
             return;
         }

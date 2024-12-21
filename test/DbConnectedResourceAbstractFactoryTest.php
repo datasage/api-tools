@@ -80,7 +80,7 @@ class DbConnectedResourceAbstractFactoryTest extends TestCase
         $this->assertFalse($this->factory->canCreate($services, 'Foo'));
     }
 
-    public function invalidConfig(): array
+    public static function invalidConfig(): array
     {
         return [
             'invalid_table_service' => [['table_service' => 'non_existent']],
@@ -117,7 +117,7 @@ class DbConnectedResourceAbstractFactoryTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: array<string, string>, 1: string}> */
-    public function validConfig(): array
+    public static function validConfig(): array
     {
         return [
             'table_service' => [['table_service' => 'foobartable'], 'foobartable'],
@@ -149,7 +149,6 @@ class DbConnectedResourceAbstractFactoryTest extends TestCase
     }
 
     /**
-     * @param array $configForDbConnected
      * @dataProvider validConfig
      */
     public function testFactoryReturnsResourceBasedOnConfiguration(

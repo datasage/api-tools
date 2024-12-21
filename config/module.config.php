@@ -6,8 +6,6 @@ namespace Laminas\ApiTools;
 
 use Laminas\Db\Adapter\AdapterAbstractServiceFactory as DbAdapterAbstractServiceFactory;
 use Laminas\ServiceManager\Factory\InvokableFactory;
-use ZF\Apigility\MvcAuth\UnauthenticatedListener;
-use ZF\Apigility\MvcAuth\UnauthorizedListener;
 
 return [
     'asset_manager'   => [
@@ -29,11 +27,6 @@ return [
         ],
     ],
     'service_manager' => [
-        // Legacy Zend Framework aliases
-        'aliases'            => [
-            UnauthenticatedListener::class => MvcAuth\UnauthenticatedListener::class,
-            UnauthorizedListener::class    => MvcAuth\UnauthorizedListener::class,
-        ],
         'factories'          => [
             MvcAuth\UnauthenticatedListener::class => InvokableFactory::class,
             MvcAuth\UnauthorizedListener::class    => InvokableFactory::class,

@@ -17,7 +17,7 @@ class UnauthorizedListener
     public function __invoke(MvcAuthEvent $mvcAuthEvent)
     {
         if ($mvcAuthEvent->isAuthorized()) {
-            return;
+            return null;
         }
 
         $response = new ApiProblemResponse(new ApiProblem(403, 'Forbidden'));

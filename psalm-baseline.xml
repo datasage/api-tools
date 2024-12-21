@@ -1,378 +1,399 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.30.0@d0bc6e25d89f649e4f36a534f330f8bb4643dd69">
+<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
   <file src="src/Application.php">
-    <LessSpecificReturnStatement occurrences="3">
-      <code>$this-&gt;completeRequest($event)</code>
-      <code>$this-&gt;completeRequest($event)</code>
-      <code>$this-&gt;completeRequest($event)</code>
+    <LessSpecificReturnStatement>
+      <code><![CDATA[$this->completeRequest($event)]]></code>
+      <code><![CDATA[$this->completeRequest($event)]]></code>
+      <code><![CDATA[$this->completeRequest($event)]]></code>
     </LessSpecificReturnStatement>
-    <MissingClosureParamType occurrences="1">
-      <code>$r</code>
+    <MissingClosureParamType>
+      <code><![CDATA[$r]]></code>
     </MissingClosureParamType>
-    <MixedAssignment occurrences="3">
-      <code>$response</code>
-      <code>$response</code>
-      <code>$response</code>
+    <MixedAssignment>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
     </MixedAssignment>
-    <MoreSpecificReturnType occurrences="2">
-      <code>self</code>
-      <code>self</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[self]]></code>
+      <code><![CDATA[self]]></code>
     </MoreSpecificReturnType>
-    <PropertyNotSetInConstructor occurrences="1">
-      <code>Application</code>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[Application]]></code>
     </PropertyNotSetInConstructor>
   </file>
   <file src="src/DbConnectedResource.php">
-    <ArgumentTypeCoercion occurrences="1">
-      <code>$this-&gt;table</code>
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$this->table]]></code>
     </ArgumentTypeCoercion>
-    <DeprecatedClass occurrences="1">
-      <code>new TableGatewayPaginator($this-&gt;table)</code>
+    <DeprecatedClass>
+      <code><![CDATA[new TableGatewayPaginator($this->table)]]></code>
     </DeprecatedClass>
-    <InvalidStringClass occurrences="1">
-      <code>new $this-&gt;collectionClass($adapter)</code>
+    <InvalidStringClass>
+      <code><![CDATA[new $this->collectionClass($adapter)]]></code>
     </InvalidStringClass>
-    <LessSpecificReturnStatement occurrences="1">
-      <code>new $this-&gt;collectionClass($adapter)</code>
+    <LessSpecificReturnStatement>
+      <code><![CDATA[new $this->collectionClass($adapter)]]></code>
     </LessSpecificReturnStatement>
-    <MixedInferredReturnType occurrences="1">
-      <code>array|object</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[array<string, mixed>]]></code>
+      <code><![CDATA[array|object]]></code>
     </MixedInferredReturnType>
-    <MixedReturnStatement occurrences="1">
-      <code>$resultSet-&gt;current()</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$filter->getValues()]]></code>
+      <code><![CDATA[$resultSet->current()]]></code>
     </MixedReturnStatement>
-    <MixedReturnTypeCoercion occurrences="2">
-      <code>(array) $data</code>
-      <code>array&lt;string, mixed&gt;</code>
+    <MixedReturnTypeCoercion>
+      <code><![CDATA[(array) $data]]></code>
     </MixedReturnTypeCoercion>
-    <MoreSpecificImplementedParamType occurrences="7">
-      <code>$data</code>
-      <code>$data</code>
-      <code>$data</code>
-      <code>$id</code>
-      <code>$id</code>
-      <code>$id</code>
-      <code>$id</code>
+    <MoreSpecificImplementedParamType>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
     </MoreSpecificImplementedParamType>
-    <MoreSpecificReturnType occurrences="1">
-      <code>Paginator</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[Paginator]]></code>
     </MoreSpecificReturnType>
-    <ParamNameMismatch occurrences="1">
-      <code>$data</code>
+    <ParamNameMismatch>
+      <code><![CDATA[$data]]></code>
     </ParamNameMismatch>
-    <PropertyNotSetInConstructor occurrences="4">
-      <code>DbConnectedResource</code>
-      <code>DbConnectedResource</code>
-      <code>DbConnectedResource</code>
-      <code>DbConnectedResource</code>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[DbConnectedResource]]></code>
+      <code><![CDATA[DbConnectedResource]]></code>
+      <code><![CDATA[DbConnectedResource]]></code>
+      <code><![CDATA[DbConnectedResource]]></code>
     </PropertyNotSetInConstructor>
-    <UndefinedInterfaceMethod occurrences="1">
-      <code>getLastInsertValue</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getLastInsertValue]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/DbConnectedResourceAbstractFactory.php">
-    <DeprecatedInterface occurrences="1">
-      <code>DbConnectedResourceAbstractFactory</code>
+    <DeprecatedInterface>
+      <code><![CDATA[DbConnectedResourceAbstractFactory]]></code>
     </DeprecatedInterface>
-    <InvalidStringClass occurrences="1">
-      <code>new $resourceClass($table, $identifier, $collection)</code>
+    <InvalidStringClass>
+      <code><![CDATA[new $resourceClass($table, $identifier, $collection)]]></code>
     </InvalidStringClass>
-    <LessSpecificReturnStatement occurrences="1">
-      <code>new $resourceClass($table, $identifier, $collection)</code>
+    <LessSpecificReturnStatement>
+      <code><![CDATA[new $resourceClass($table, $identifier, $collection)]]></code>
     </LessSpecificReturnStatement>
-    <MixedArgument occurrences="7">
-      <code>$collection</code>
-      <code>$collection</code>
-      <code>$config</code>
-      <code>$config['table_service']</code>
-      <code>$config['table_service']</code>
-      <code>$resourceClass</code>
-      <code>$resourceClass</code>
+    <MixedArgument>
+      <code><![CDATA[$collection]]></code>
+      <code><![CDATA[$collection]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config['table_service']]]></code>
+      <code><![CDATA[$config['table_service']]]></code>
+      <code><![CDATA[$resourceClass]]></code>
+      <code><![CDATA[$resourceClass]]></code>
     </MixedArgument>
-    <MixedArrayAccess occurrences="2">
-      <code>$config['api-tools']</code>
-      <code>$config['api-tools']</code>
+    <MixedArrayAccess>
+      <code><![CDATA[$config['api-tools']]]></code>
+      <code><![CDATA[$config['api-tools']]]></code>
+      <code><![CDATA[$config['api-tools']['db-connected']]]></code>
+      <code><![CDATA[$config['api-tools']['db-connected']]]></code>
+      <code><![CDATA[$config['api-tools']['db-connected'][$requestedName]]]></code>
     </MixedArrayAccess>
-    <MixedAssignment occurrences="4">
-      <code>$config</code>
-      <code>$config</code>
-      <code>$config</code>
-      <code>$config</code>
+    <MixedAssignment>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="2">
-      <code>TableGatewayInterface</code>
-      <code>string</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[TableGatewayInterface]]></code>
+      <code><![CDATA[string]]></code>
     </MixedInferredReturnType>
-    <MixedOperand occurrences="1">
-      <code>$config['table_name']</code>
+    <MixedOperand>
+      <code><![CDATA[$config['table_name']]]></code>
     </MixedOperand>
-    <MixedReturnStatement occurrences="4">
-      <code>$config['entity_identifier_name']</code>
-      <code>$config['identifier_name']</code>
-      <code>$container-&gt;get($config['table_service'])</code>
-      <code>$container-&gt;get($tableGatewayService)</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$config['entity_identifier_name']]]></code>
+      <code><![CDATA[$config['identifier_name']]]></code>
+      <code><![CDATA[$container->get($config['table_service'])]]></code>
+      <code><![CDATA[$container->get($tableGatewayService)]]></code>
     </MixedReturnStatement>
-    <MoreSpecificReturnType occurrences="1">
-      <code>Resource</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[Resource]]></code>
     </MoreSpecificReturnType>
-    <ParamNameMismatch occurrences="2">
-      <code>$container</code>
-      <code>$container</code>
+    <ParamNameMismatch>
+      <code><![CDATA[$container]]></code>
+      <code><![CDATA[$container]]></code>
     </ParamNameMismatch>
   </file>
   <file src="src/Model/MongoConnectedListener.php">
-    <MixedArrayAccess occurrences="2">
-      <code>$collection['_id']</code>
-      <code>$result['_id']</code>
+    <MixedArrayAccess>
+      <code><![CDATA[$collection['_id']]]></code>
+      <code><![CDATA[$result['_id']]]></code>
     </MixedArrayAccess>
-    <MixedArrayAssignment occurrences="1">
-      <code>$result['_id']</code>
+    <MixedArrayAssignment>
+      <code><![CDATA[$result['_id']]]></code>
     </MixedArrayAssignment>
-    <MixedArrayOffset occurrences="1">
-      <code>$result[$id]</code>
+    <MixedArrayOffset>
+      <code><![CDATA[$result[$id]]]></code>
     </MixedArrayOffset>
-    <MixedAssignment occurrences="7">
-      <code>$collection</code>
-      <code>$id</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result</code>
-      <code>$result[$id]</code>
-      <code>$rows</code>
+    <MixedAssignment>
+      <code><![CDATA[$collection]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result]]></code>
+      <code><![CDATA[$result[$id]]]></code>
+      <code><![CDATA[$rows]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="1">
-      <code>array|ApiProblem</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[array|ApiProblem]]></code>
     </MixedInferredReturnType>
-    <MixedReturnStatement occurrences="1">
-      <code>$result</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$result]]></code>
     </MixedReturnStatement>
-    <MoreSpecificImplementedParamType occurrences="5">
-      <code>$data</code>
-      <code>$data</code>
-      <code>$id</code>
-      <code>$id</code>
-      <code>$id</code>
+    <MoreSpecificImplementedParamType>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
+      <code><![CDATA[$id]]></code>
     </MoreSpecificImplementedParamType>
-    <PropertyNotSetInConstructor occurrences="6">
-      <code>$collection</code>
-      <code>MongoConnectedListener</code>
-      <code>MongoConnectedListener</code>
-      <code>MongoConnectedListener</code>
-      <code>MongoConnectedListener</code>
-      <code>MongoConnectedListener</code>
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[MongoConnectedListener]]></code>
+      <code><![CDATA[MongoConnectedListener]]></code>
+      <code><![CDATA[MongoConnectedListener]]></code>
+      <code><![CDATA[MongoConnectedListener]]></code>
+      <code><![CDATA[MongoConnectedListener]]></code>
     </PropertyNotSetInConstructor>
-    <UndefinedClass occurrences="6">
-      <code>$e</code>
-      <code>MongoCollection</code>
-      <code>MongoException</code>
-      <code>MongoId</code>
-      <code>MongoId</code>
-      <code>MongoId</code>
+    <UndefinedClass>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[MongoCollection]]></code>
+      <code><![CDATA[MongoException]]></code>
+      <code><![CDATA[MongoId]]></code>
+      <code><![CDATA[MongoId]]></code>
+      <code><![CDATA[MongoId]]></code>
     </UndefinedClass>
-    <UndefinedDocblockClass occurrences="6">
-      <code>$this-&gt;collection</code>
-      <code>$this-&gt;collection</code>
-      <code>$this-&gt;collection</code>
-      <code>$this-&gt;collection</code>
-      <code>$this-&gt;collection</code>
-      <code>MongoCollection</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[$this->collection]]></code>
+      <code><![CDATA[$this->collection]]></code>
+      <code><![CDATA[$this->collection]]></code>
+      <code><![CDATA[$this->collection]]></code>
+      <code><![CDATA[$this->collection]]></code>
+      <code><![CDATA[MongoCollection]]></code>
     </UndefinedDocblockClass>
   </file>
   <file src="src/Module.php">
-    <MixedArgument occurrences="2">
-      <code>$services-&gt;get(MvcAuth\UnauthenticatedListener::class)</code>
-      <code>$services-&gt;get(MvcAuth\UnauthorizedListener::class)</code>
+    <MixedArgument>
+      <code><![CDATA[$services->get(MvcAuth\UnauthenticatedListener::class)]]></code>
+      <code><![CDATA[$services->get(MvcAuth\UnauthorizedListener::class)]]></code>
     </MixedArgument>
-    <MixedInferredReturnType occurrences="1">
-      <code>array</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[array]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall occurrences="1">
-      <code>attach</code>
+    <MixedMethodCall>
+      <code><![CDATA[attach]]></code>
     </MixedMethodCall>
-    <MixedReturnStatement occurrences="1">
-      <code>include __DIR__ . '/../config/module.config.php'</code>
+    <MixedReturnStatement>
+      <code><![CDATA[include __DIR__ . '/../config/module.config.php']]></code>
     </MixedReturnStatement>
   </file>
   <file src="src/MvcAuth/UnauthenticatedListener.php">
-    <PossiblyNullReference occurrences="1">
-      <code>isValid</code>
+    <PossiblyNullReference>
+      <code><![CDATA[isValid]]></code>
     </PossiblyNullReference>
   </file>
   <file src="src/TableGatewayAbstractFactory.php">
-    <DeprecatedInterface occurrences="1">
-      <code>TableGatewayAbstractFactory</code>
+    <DeprecatedInterface>
+      <code><![CDATA[TableGatewayAbstractFactory]]></code>
     </DeprecatedInterface>
-    <InvalidStringClass occurrences="1">
-      <code>new $entity()</code>
+    <InvalidStringClass>
+      <code><![CDATA[new $entity()]]></code>
     </InvalidStringClass>
-    <MixedArgument occurrences="8">
-      <code>$config['adapter_name']</code>
-      <code>$config['adapter_name']</code>
-      <code>$config['adapter_name']</code>
-      <code>$dbConnectedConfig</code>
-      <code>$entity</code>
-      <code>$entity</code>
-      <code>$restConfig</code>
-      <code>$table</code>
+    <MixedArgument>
+      <code><![CDATA[$config['adapter_name']]]></code>
+      <code><![CDATA[$config['adapter_name']]]></code>
+      <code><![CDATA[$config['adapter_name']]]></code>
+      <code><![CDATA[$dbConnectedConfig]]></code>
+      <code><![CDATA[$entity]]></code>
+      <code><![CDATA[$entity]]></code>
+      <code><![CDATA[$restConfig]]></code>
+      <code><![CDATA[$table]]></code>
     </MixedArgument>
-    <MixedArrayAccess occurrences="4">
-      <code>$config['api-tools']</code>
-      <code>$config['api-tools']</code>
-      <code>$config['api-tools-rest'][$dbConnectedConfig['controller_service_name']]</code>
-      <code>$dbConnectedConfig['table_name']</code>
+    <MixedArrayAccess>
+      <code><![CDATA[$config['api-tools']]]></code>
+      <code><![CDATA[$config['api-tools']]]></code>
+      <code><![CDATA[$config['api-tools']['db-connected']]]></code>
+      <code><![CDATA[$config['api-tools']['db-connected']]]></code>
+      <code><![CDATA[$config['api-tools']['db-connected'][$gatewayName]]]></code>
+      <code><![CDATA[$config['api-tools-rest'][$dbConnectedConfig['controller_service_name']]]]></code>
+      <code><![CDATA[$dbConnectedConfig['table_name']]]></code>
     </MixedArrayAccess>
-    <MixedArrayOffset occurrences="2">
-      <code>$config['api-tools-rest'][$dbConnectedConfig['controller_service_name']]</code>
-      <code>$config['api-tools-rest'][$dbConnectedConfig['controller_service_name']]</code>
+    <MixedArrayOffset>
+      <code><![CDATA[$config['api-tools-rest'][$dbConnectedConfig['controller_service_name']]]]></code>
+      <code><![CDATA[$config['api-tools-rest'][$dbConnectedConfig['controller_service_name']]]]></code>
     </MixedArrayOffset>
-    <MixedAssignment occurrences="9">
-      <code>$config</code>
-      <code>$config</code>
-      <code>$config</code>
-      <code>$dbConnectedConfig</code>
-      <code>$hydratorName</code>
-      <code>$hydrators</code>
-      <code>$restConfig</code>
-      <code>$restConfig</code>
-      <code>$table</code>
+    <MixedAssignment>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$dbConnectedConfig]]></code>
+      <code><![CDATA[$hydratorName]]></code>
+      <code><![CDATA[$hydrators]]></code>
+      <code><![CDATA[$restConfig]]></code>
+      <code><![CDATA[$restConfig]]></code>
+      <code><![CDATA[$table]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="2">
-      <code>AdapterInterface</code>
-      <code>HydratorInterface</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[AdapterInterface]]></code>
+      <code><![CDATA[HydratorInterface]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall occurrences="1">
-      <code>get</code>
+    <MixedMethodCall>
+      <code><![CDATA[get]]></code>
     </MixedMethodCall>
-    <MixedReturnStatement occurrences="4">
-      <code>$container-&gt;get($config['adapter_name'])</code>
-      <code>$container-&gt;get(Adapter::class)</code>
-      <code>$container-&gt;get(AdapterInterface::class)</code>
-      <code>$hydrators-&gt;get($hydratorName)</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$container->get($config['adapter_name'])]]></code>
+      <code><![CDATA[$container->get(Adapter::class)]]></code>
+      <code><![CDATA[$container->get(AdapterInterface::class)]]></code>
+      <code><![CDATA[$hydrators->get($hydratorName)]]></code>
     </MixedReturnStatement>
-    <ParamNameMismatch occurrences="2">
-      <code>$container</code>
-      <code>$container</code>
+    <ParamNameMismatch>
+      <code><![CDATA[$container]]></code>
+      <code><![CDATA[$container]]></code>
     </ParamNameMismatch>
   </file>
   <file src="test/ApplicationTest.php">
-    <InvalidArgument occurrences="9">
-      <code>$events</code>
-      <code>$request</code>
-      <code>$request</code>
-      <code>$request</code>
-      <code>$response</code>
-      <code>$response</code>
-      <code>$services</code>
-      <code>$this-&gt;prophesize(ServiceManager::class)</code>
-      <code>[]</code>
+    <InvalidArgument>
+      <code><![CDATA[$events]]></code>
+      <code><![CDATA[$request]]></code>
+      <code><![CDATA[$request]]></code>
+      <code><![CDATA[$request]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$response]]></code>
+      <code><![CDATA[$services]]></code>
+      <code><![CDATA[$this->prophesize(ServiceManager::class)]]></code>
+      <code><![CDATA[[]]]></code>
     </InvalidArgument>
-    <MissingClosureParamType occurrences="5">
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
+    <MissingClosureParamType>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
     </MissingClosureParamType>
-    <MixedArgument occurrences="3">
-      <code>$request-&gt;reveal()</code>
-      <code>$response-&gt;reveal()</code>
-      <code>$this-&gt;services-&gt;reveal()</code>
-    </MixedArgument>
-    <MixedMethodCall occurrences="1">
-      <code>getError</code>
+    <MixedArgumentTypeCoercion>
+      <code><![CDATA[$request->reveal()]]></code>
+      <code><![CDATA[$response->reveal()]]></code>
+      <code><![CDATA[$this->services->reveal()]]></code>
+    </MixedArgumentTypeCoercion>
+    <MixedMethodCall>
+      <code><![CDATA[getError]]></code>
     </MixedMethodCall>
-    <TooManyArguments occurrences="1">
-      <code>new Application([], $services, $events, $request, $response)</code>
+    <TooManyArguments>
+      <code><![CDATA[new Application([], $services, $events, $request, $response)]]></code>
     </TooManyArguments>
-    <UnusedClosureParam occurrences="4">
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
-      <code>$e</code>
+    <UnusedClosureParam>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
+      <code><![CDATA[$e]]></code>
     </UnusedClosureParam>
+    <UnusedMethodCall>
+      <code><![CDATA[setAccessible]]></code>
+    </UnusedMethodCall>
   </file>
   <file src="test/DbConnectedResourceAbstractFactoryTest.php">
-    <MixedInferredReturnType occurrences="1">
-      <code>array</code>
-    </MixedInferredReturnType>
-    <MixedMethodCall occurrences="8">
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
+    <MixedMethodCall>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
     </MixedMethodCall>
+    <MixedReturnStatement>
+      <code><![CDATA[array]]></code>
+    </MixedReturnStatement>
+  </file>
+  <file src="test/DbConnectedResourceTest.php">
+    <UnusedMethodCall>
+      <code><![CDATA[setAccessible]]></code>
+    </UnusedMethodCall>
   </file>
   <file src="test/Model/MongoConnectedListenerTest.php">
-    <MixedArrayAccess occurrences="1">
-      <code>$result['_id']</code>
+    <MixedArrayAccess>
+      <code><![CDATA[$result['_id']]]></code>
     </MixedArrayAccess>
-    <MixedAssignment occurrences="1">
-      <code>static::$mongoDb</code>
+    <MixedAssignment>
+      <code><![CDATA[static::$mongoDb]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="1">
-      <code>null|string|int</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[null|string|int]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall occurrences="6">
-      <code>create</code>
-      <code>create</code>
-      <code>delete</code>
-      <code>fetch</code>
-      <code>fetchAll</code>
-      <code>patch</code>
+    <MixedMethodCall>
+      <code><![CDATA[create]]></code>
+      <code><![CDATA[create]]></code>
+      <code><![CDATA[delete]]></code>
+      <code><![CDATA[fetch]]></code>
+      <code><![CDATA[fetchAll]]></code>
+      <code><![CDATA[patch]]></code>
     </MixedMethodCall>
-    <MixedReturnStatement occurrences="1">
-      <code>$result['_id']</code>
+    <MixedReturnStatement>
+      <code><![CDATA[$result['_id']]]></code>
     </MixedReturnStatement>
-    <UndefinedClass occurrences="2">
-      <code>MongoClient</code>
-      <code>MongoDB</code>
+    <UndefinedClass>
+      <code><![CDATA[MongoClient]]></code>
+      <code><![CDATA[MongoDB]]></code>
     </UndefinedClass>
-    <UndefinedDocblockClass occurrences="1">
-      <code>MongoDB</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[MongoDB]]></code>
     </UndefinedDocblockClass>
-    <UndefinedThisPropertyAssignment occurrences="1">
-      <code>$this-&gt;mongoListener</code>
+    <UndefinedThisPropertyAssignment>
+      <code><![CDATA[$this->mongoListener]]></code>
     </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch occurrences="6">
-      <code>$this-&gt;mongoListener</code>
-      <code>$this-&gt;mongoListener</code>
-      <code>$this-&gt;mongoListener</code>
-      <code>$this-&gt;mongoListener</code>
-      <code>$this-&gt;mongoListener</code>
-      <code>$this-&gt;mongoListener</code>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->mongoListener]]></code>
+      <code><![CDATA[$this->mongoListener]]></code>
+      <code><![CDATA[$this->mongoListener]]></code>
+      <code><![CDATA[$this->mongoListener]]></code>
+      <code><![CDATA[$this->mongoListener]]></code>
     </UndefinedThisPropertyFetch>
   </file>
   <file src="test/TableGatewayAbstractFactoryTest.php">
-    <ArgumentTypeCoercion occurrences="1">
-      <code>$expectedClassName</code>
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$expectedClassName]]></code>
     </ArgumentTypeCoercion>
-    <DeprecatedClass occurrences="1">
-      <code>ClassMethods::class</code>
+    <DeprecatedClass>
+      <code><![CDATA[ClassMethods::class]]></code>
     </DeprecatedClass>
-    <LessSpecificReturnStatement occurrences="1"/>
-    <MixedMethodCall occurrences="15">
-      <code>shouldNotBeCalled</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
+    <LessSpecificReturnStatement>
+      <code><![CDATA[[
+            'named_adapter'   => ['Db\NamedAdapter'],
+            'default_adapter' => [DbAdapter::class],
+        ]]]></code>
+    </LessSpecificReturnStatement>
+    <MixedMethodCall>
+      <code><![CDATA[shouldNotBeCalled]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
+      <code><![CDATA[willReturn]]></code>
     </MixedMethodCall>
-    <MoreSpecificReturnType occurrences="1">
-      <code>array&lt;string, array{0: class-string}&gt;</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[array<string, array{0: class-string}>]]></code>
     </MoreSpecificReturnType>
+    <UnusedMethodCall>
+      <code><![CDATA[setAccessible]]></code>
+    </UnusedMethodCall>
   </file>
 </files>

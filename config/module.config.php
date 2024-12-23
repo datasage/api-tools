@@ -32,9 +32,11 @@ return [
             MvcAuth\UnauthorizedListener::class    => InvokableFactory::class,
         ],
         'abstract_factories' => [
+            /*
             DbAdapterAbstractServiceFactory::class, // so that db-connected works "out-of-the-box"
             DbConnectedResourceAbstractFactory::class,
             TableGatewayAbstractFactory::class,
+            */
         ],
     ],
     'api-tools'       => [

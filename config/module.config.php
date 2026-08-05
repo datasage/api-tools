@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Laminas\ApiTools;
 
-use Laminas\Db\Adapter\AdapterAbstractServiceFactory as DbAdapterAbstractServiceFactory;
 use Laminas\ServiceManager\Factory\InvokableFactory;
 
 return [

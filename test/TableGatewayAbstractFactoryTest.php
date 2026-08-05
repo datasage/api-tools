@@ -304,7 +304,6 @@ class TableGatewayAbstractFactoryTest extends TestCase
     private function assertObjectPrototypeProperty(HydratingResultSet $resultSet, string $expectedClassName): void
     {
         $objectPrototypeProperty = new ReflectionProperty($resultSet, 'objectPrototype');
-        $objectPrototypeProperty->setAccessible(true);
         $this->assertInstanceOf($expectedClassName, $objectPrototypeProperty->getValue($resultSet));
     }
 }

@@ -40,7 +40,6 @@ class DbConnectedResourceTest extends TestCase
     ): void {
         $r = new ReflectionObject($resource);
         $p = $r->getProperty('inputFilter');
-        $p->setAccessible(true);
         $p->setValue($resource, $inputFilter);
     }
 

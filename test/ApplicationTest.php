@@ -105,7 +105,6 @@ class ApplicationTest extends TestCase
             ->setRequest($request->reveal())
             ->setResponse($response->reveal());
         $r = new ReflectionProperty($app, 'event');
-        $r->setAccessible(true);
         $r->setValue($app, $event);
         return $app;
     }

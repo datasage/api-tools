@@ -7,6 +7,8 @@ namespace LaminasTest\ApiTools;
 use Laminas\ApiTools\DbConnectedResource;
 use Laminas\ApiTools\DbConnectedResourceAbstractFactory;
 use Laminas\Db\TableGateway\TableGateway;
+use Override;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
@@ -22,6 +24,7 @@ class DbConnectedResourceAbstractFactoryTest extends TestCase
     /** @var DbConnectedResourceAbstractFactory */
     protected $factory;
 
+    #[Override]
     protected function setUp(): void
     {
         $this->services = $this->prophesize(ContainerInterface::class);
@@ -90,8 +93,8 @@ class DbConnectedResourceAbstractFactoryTest extends TestCase
 
     /**
      * @param array<string,string> $configForDbConnected
-     * @dataProvider invalidConfig
      */
+    #[DataProvider('invalidConfig')]
     public function testWillNotCreateServiceIfDbConnectedSegmentIsInvalidConfiguration(
         array $configForDbConnected
     ): void {
@@ -125,9 +128,7 @@ class DbConnectedResourceAbstractFactoryTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider validConfig
-     */
+    #[DataProvider('validConfig')]
     public function testWillCreateServiceIfDbConnectedSegmentIsValid(
         array $configForDbConnected,
         string $tableServiceName
@@ -148,9 +149,7 @@ class DbConnectedResourceAbstractFactoryTest extends TestCase
         $this->assertTrue($this->factory->canCreate($services, 'Foo'));
     }
 
-    /**
-     * @dataProvider validConfig
-     */
+    #[DataProvider('validConfig')]
     public function testFactoryReturnsResourceBasedOnConfiguration(
         array $configForDbConnected,
         string $tableServiceName

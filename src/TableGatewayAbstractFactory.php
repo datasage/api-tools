@@ -12,6 +12,7 @@ use Laminas\Hydrator\HydratorInterface;
 use Laminas\ServiceManager\AbstractFactoryInterface;
 use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
 use Laminas\ServiceManager\ServiceLocatorInterface;
+use Override;
 use Psr\Container\ContainerInterface;
 use stdClass;
 
@@ -29,6 +30,7 @@ class TableGatewayAbstractFactory implements AbstractFactoryInterface
      * @param string $requestedName
      * @return bool
      */
+    #[Override]
     public function canCreate(ContainerInterface $container, $requestedName)
     {
         if (
@@ -69,6 +71,7 @@ class TableGatewayAbstractFactory implements AbstractFactoryInterface
      * @param string $requestedName
      * @return bool
      */
+    #[Override]
     public function canCreateServiceWithName(ServiceLocatorInterface $container, $name, $requestedName)
     {
         return $this->canCreate($container, $requestedName);
@@ -81,6 +84,7 @@ class TableGatewayAbstractFactory implements AbstractFactoryInterface
      * @param null|array $options
      * @return TableGateway
      */
+    #[Override]
     public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         $gatewayName       = substr($requestedName, 0, strlen($requestedName) - 6);
@@ -114,6 +118,7 @@ class TableGatewayAbstractFactory implements AbstractFactoryInterface
      * @param string $requestedName
      * @return TableGateway
      */
+    #[Override]
     public function createServiceWithName(ServiceLocatorInterface $container, $name, $requestedName)
     {
         return $this($container, $requestedName);

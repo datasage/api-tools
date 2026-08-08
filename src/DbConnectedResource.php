@@ -9,6 +9,7 @@ use Laminas\ApiTools\Rest\AbstractResourceListener;
 use Laminas\Db\TableGateway\TableGatewayInterface as TableGateway;
 use Laminas\Paginator\Adapter\DbTableGateway as TableGatewayPaginator;
 use Laminas\Paginator\Paginator;
+use Override;
 
 class DbConnectedResource extends AbstractResourceListener
 {
@@ -38,6 +39,7 @@ class DbConnectedResource extends AbstractResourceListener
      * @param array|object $data Data representing the resource to create.
      * @return array|object Newly created resource.
      */
+    #[Override]
     public function create($data)
     {
         $data = $this->retrieveData($data);
@@ -54,6 +56,7 @@ class DbConnectedResource extends AbstractResourceListener
      * @param array|object $data Data with which to replace the resource.
      * @return array|object Updated resource.
      */
+    #[Override]
     public function update($id, $data)
     {
         $data = $this->retrieveData($data);
@@ -68,6 +71,7 @@ class DbConnectedResource extends AbstractResourceListener
      * @param array|object $data Data with which to update the resource.
      * @return array|object Updated resource.
      */
+    #[Override]
     public function patch($id, $data)
     {
         return $this->update($id, $data);
@@ -79,6 +83,7 @@ class DbConnectedResource extends AbstractResourceListener
      * @param int|string $id Identifier of resource.
      * @return bool
      */
+    #[Override]
     public function delete($id)
     {
         $item = $this->table->delete([$this->identifierName => $id]);
@@ -92,6 +97,7 @@ class DbConnectedResource extends AbstractResourceListener
      * @return array|object Resource.
      * @throws DomainException If the resource is not found.
      */
+    #[Override]
     public function fetch($id)
     {
         $resultSet = $this->table->select([$this->identifierName => $id]);
@@ -107,6 +113,7 @@ class DbConnectedResource extends AbstractResourceListener
      * @param array|object $data Ignored.
      * @return Paginator
      */
+    #[Override]
     public function fetchAll($data = [])
     {
         $adapter = new TableGatewayPaginator($this->table);

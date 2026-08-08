@@ -10,6 +10,7 @@ use Laminas\Paginator\Paginator;
 use Laminas\ServiceManager\AbstractFactoryInterface;
 use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
 use Laminas\ServiceManager\ServiceLocatorInterface;
+use Override;
 use Psr\Container\ContainerInterface;
 
 use function class_exists;
@@ -25,6 +26,7 @@ class DbConnectedResourceAbstractFactory implements AbstractFactoryInterface
      * @param string $requestedName
      * @return bool
      */
+    #[Override]
     public function canCreate(ContainerInterface $container, $requestedName)
     {
         if (! $container->has('config')) {
@@ -59,6 +61,7 @@ class DbConnectedResourceAbstractFactory implements AbstractFactoryInterface
      * @param string $requestedName
      * @return bool
      */
+    #[Override]
     public function canCreateServiceWithName(ServiceLocatorInterface $container, $name, $requestedName)
     {
         return $this->canCreate($container, $requestedName);
@@ -71,6 +74,7 @@ class DbConnectedResourceAbstractFactory implements AbstractFactoryInterface
      * @param null|array $options
      * @return Resource
      */
+    #[Override]
     public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         $config        = $container->get('config');
@@ -92,6 +96,7 @@ class DbConnectedResourceAbstractFactory implements AbstractFactoryInterface
      * @param string $requestedName
      * @return Resource
      */
+    #[Override]
     public function createServiceWithName(ServiceLocatorInterface $container, $name, $requestedName)
     {
         return $this($container, $requestedName);

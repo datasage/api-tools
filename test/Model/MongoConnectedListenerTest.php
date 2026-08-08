@@ -8,6 +8,8 @@ use Laminas\ApiTools\Model\MongoConnectedListener;
 use MongoClient;
 use MongoCollection;
 use MongoDB;
+use Override;
+use PHPUnit\Framework\Attributes\Depends;
 use PHPUnit\Framework\TestCase;
 
 use function class_exists;
@@ -21,6 +23,7 @@ class MongoConnectedListenerTest extends TestCase
     /** @var MongoDB */
     protected static $mongoDb;
 
+    #[Override]
     protected function setUp(): void
     {
         if (
@@ -40,6 +43,7 @@ class MongoConnectedListenerTest extends TestCase
         $this->mongoListener = new MongoConnectedListener($collection);
     }
 
+    #[Override]
     public static function tearDownAfterClass(): void
     {
         if (static::$mongoDb instanceof MongoDB) {
@@ -61,8 +65,8 @@ class MongoConnectedListenerTest extends TestCase
     /**
      * @param mixed $lastId
      * @return mixed
-     * @depends testCreate
      */
+    #[Depends('testCreate')]
     public function testFetch(string $lastId): string
     {
         if (empty($lastId)) {
@@ -80,8 +84,8 @@ class MongoConnectedListenerTest extends TestCase
     /**
      * @param mixed $lastId
      * @return mixed
-     * @depends testFetch
      */
+    #[Depends('testFetch')]
     public function testPatch(string $lastId): string
     {
         if (empty($lastId)) {
@@ -96,8 +100,8 @@ class MongoConnectedListenerTest extends TestCase
 
     /**
      * @param mixed $lastId
-     * @depends testPatch
      */
+    #[Depends('testPatch')]
     public function testDelete(string $lastId): void
     {
         if (empty($lastId)) {

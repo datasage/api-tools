@@ -17,9 +17,6 @@
     <MissingClosureParamType>
       <code><![CDATA[$r]]></code>
     </MissingClosureParamType>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function run()]]></code>
-    </MissingOverrideAttribute>
     <MixedAssignment>
       <code><![CDATA[$response]]></code>
       <code><![CDATA[$response]]></code>
@@ -52,14 +49,6 @@
     <LessSpecificReturnStatement>
       <code><![CDATA[new $this->collectionClass($adapter)]]></code>
     </LessSpecificReturnStatement>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function create($data)]]></code>
-      <code><![CDATA[public function delete($id)]]></code>
-      <code><![CDATA[public function fetch($id)]]></code>
-      <code><![CDATA[public function fetchAll($data = [])]]></code>
-      <code><![CDATA[public function patch($id, $data)]]></code>
-      <code><![CDATA[public function update($id, $data)]]></code>
-    </MissingOverrideAttribute>
     <MixedReturnStatement>
       <code><![CDATA[$filter->getValues()]]></code>
       <code><![CDATA[$resultSet->current()]]></code>
@@ -105,12 +94,6 @@
     <LessSpecificReturnStatement>
       <code><![CDATA[new $resourceClass($table, $identifier, $collection)]]></code>
     </LessSpecificReturnStatement>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
-      <code><![CDATA[public function canCreate(ContainerInterface $container, $requestedName)]]></code>
-      <code><![CDATA[public function canCreateServiceWithName(ServiceLocatorInterface $container, $name, $requestedName)]]></code>
-      <code><![CDATA[public function createServiceWithName(ServiceLocatorInterface $container, $name, $requestedName)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$collection]]></code>
       <code><![CDATA[$collection]]></code>
@@ -154,13 +137,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[MongoConnectedListener]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function create($data)]]></code>
-      <code><![CDATA[public function delete($id)]]></code>
-      <code><![CDATA[public function fetch($id)]]></code>
-      <code><![CDATA[public function fetchAll($params = [])]]></code>
-      <code><![CDATA[public function patch($id, $data)]]></code>
-    </MissingOverrideAttribute>
     <MixedArrayAccess>
       <code><![CDATA[$collection['_id']]]></code>
       <code><![CDATA[$result['_id']]]></code>
@@ -258,12 +234,6 @@
     <InvalidStringClass>
       <code><![CDATA[new $entity()]]></code>
     </InvalidStringClass>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
-      <code><![CDATA[public function canCreate(ContainerInterface $container, $requestedName)]]></code>
-      <code><![CDATA[public function canCreateServiceWithName(ServiceLocatorInterface $container, $name, $requestedName)]]></code>
-      <code><![CDATA[public function createServiceWithName(ServiceLocatorInterface $container, $name, $requestedName)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config['adapter_name']]]></code>
       <code><![CDATA[$config['adapter_name']]]></code>
@@ -339,9 +309,6 @@
       <code><![CDATA[$e]]></code>
       <code><![CDATA[$e]]></code>
     </MissingClosureParamType>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedMethodCall>
       <code><![CDATA[getError]]></code>
     </MixedMethodCall>
@@ -374,9 +341,6 @@
       <code><![CDATA[willReturn]]></code>
       <code><![CDATA[willReturn]]></code>
     </InvalidMethodCall>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedMethodCall>
       <code><![CDATA[willReturn]]></code>
       <code><![CDATA[willReturn]]></code>
@@ -424,9 +388,6 @@
       <code><![CDATA[shouldBeCalled]]></code>
       <code><![CDATA[willReturn]]></code>
     </InvalidMethodCall>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedMethodCall>
       <code><![CDATA[willReturn]]></code>
       <code><![CDATA[willReturn]]></code>
@@ -466,10 +427,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[MongoConnectedListenerTest]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-      <code><![CDATA[public static function tearDownAfterClass(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedArrayAccess>
       <code><![CDATA[$result['_id']]]></code>
     </MixedArrayAccess>
@@ -548,9 +505,6 @@
             'default_adapter' => [DbAdapter::class],
         ]]]></code>
     </LessSpecificReturnStatement>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedMethodCall>
       <code><![CDATA[shouldNotBeCalled]]></code>
       <code><![CDATA[willReturn]]></code>

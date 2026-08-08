@@ -9,6 +9,7 @@ use Laminas\ApiTools\DbConnectedResource;
 use Laminas\Db\ResultSet\AbstractResultSet;
 use Laminas\Db\TableGateway\TableGateway;
 use Laminas\InputFilter\InputFilter;
+use Override;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
@@ -25,6 +26,7 @@ class DbConnectedResourceTest extends TestCase
     /** @var DbConnectedResource */
     protected $resource;
 
+    #[Override]
     protected function setUp(): void
     {
         $this->table    = $this->prophesize(TableGateway::class);

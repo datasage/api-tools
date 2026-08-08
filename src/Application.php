@@ -9,6 +9,7 @@ use Laminas\EventManager\EventManagerInterface;
 use Laminas\Mvc\Application as MvcApplication;
 use Laminas\Mvc\MvcEvent;
 use Laminas\Stdlib\ResponseInterface;
+use Override;
 use Throwable;
 
 class Application extends MvcApplication
@@ -35,6 +36,7 @@ class Application extends MvcApplication
      *           that can be returned immediately.
      * @return self
      */
+    #[Override]
     public function run()
     {
         $events = $this->events;

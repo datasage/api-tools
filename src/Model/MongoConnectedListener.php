@@ -11,6 +11,7 @@ use Laminas\Stdlib\Parameters;
 use MongoCollection;
 use MongoException;
 use MongoId;
+use Override;
 
 use function is_object;
 
@@ -31,6 +32,7 @@ class MongoConnectedListener extends AbstractResourceListener
      * @return array
      * @throws CreationException
      */
+    #[Override]
     public function create($data)
     {
         if (is_object($data)) {
@@ -53,6 +55,7 @@ class MongoConnectedListener extends AbstractResourceListener
      * @param  array $data
      * @return bool
      */
+    #[Override]
     public function patch($id, $data)
     {
         $result = $this->collection->update(
@@ -72,6 +75,7 @@ class MongoConnectedListener extends AbstractResourceListener
      * @param  string $id
      * @return array|ApiProblem
      */
+    #[Override]
     public function fetch($id)
     {
         $result = $this->collection->findOne([
@@ -91,6 +95,7 @@ class MongoConnectedListener extends AbstractResourceListener
      * @param  Parameters|array<array-key, mixed> $params
      * @return array
      */
+    #[Override]
     public function fetchAll($params = [])
     {
         // @todo How to handle the pagination?
@@ -109,6 +114,7 @@ class MongoConnectedListener extends AbstractResourceListener
      * @param  string $id
      * @return bool
      */
+    #[Override]
     public function delete($id)
     {
         $result = $this->collection->remove([

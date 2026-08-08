@@ -11,6 +11,7 @@ use Laminas\EventManager\EventManager;
 use Laminas\Http\PhpEnvironment;
 use Laminas\Mvc\MvcEvent;
 use Laminas\ServiceManager\ServiceManager;
+use Override;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
@@ -27,6 +28,7 @@ class ApplicationTest extends TestCase
 
     protected Application $app;
 
+    #[Override]
     protected function setUp(): void
     {
         $events = new EventManager();

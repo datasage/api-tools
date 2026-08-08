@@ -15,6 +15,8 @@ use Laminas\Db\TableGateway\TableGateway;
 use Laminas\Hydrator\ClassMethods;
 use Laminas\Hydrator\ClassMethodsHydrator;
 use Laminas\Hydrator\HydratorPluginManager;
+use Override;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
@@ -34,6 +36,7 @@ class TableGatewayAbstractFactoryTest extends TestCase
     /** @var TableGatewayAbstractFactory */
     protected $factory;
 
+    #[Override]
     protected function setUp(): void
     {
         $this->services = $this->prophesize(ContainerInterface::class);
@@ -179,9 +182,7 @@ class TableGatewayAbstractFactoryTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider validConfig
-     */
+    #[DataProvider('validConfig')]
     public function testFactoryReturnsTableGatewayInstanceBasedOnConfiguration(string $adapterServiceName): void
     {
         $hydrator = $this->prophesize($this->getClassMethodsHydratorClassName())->reveal();
@@ -232,9 +233,7 @@ class TableGatewayAbstractFactoryTest extends TestCase
         $this->assertObjectPrototypeProperty($resultSet, TestAsset\Foo::class);
     }
 
-    /**
-     * @dataProvider validConfig
-     */
+    #[DataProvider('validConfig')]
     public function testFactoryReturnsTableGatewayInstanceBasedOnConfigurationWithoutLaminasRest(
         string $adapterServiceName
     ): void {

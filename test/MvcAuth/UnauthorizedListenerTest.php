@@ -9,13 +9,12 @@ use Laminas\ApiTools\MvcAuth\MvcAuthEvent;
 use Laminas\ApiTools\MvcAuth\UnauthorizedListener;
 use Laminas\Http\Response;
 use Laminas\Mvc\MvcEvent;
+use PHPUnit\Framework\Attributes\CoversMethod;
 use PHPUnit\Framework\TestCase;
 
+#[CoversMethod(UnauthorizedListener::class, '__invoke')]
 class UnauthorizedListenerTest extends TestCase
 {
-    /**
-     * @covers \Laminas\ApiTools\MvcAuth\UnauthorizedListener::__invoke
-     */
     public function testInvokePropagates403ResponseWhenAuthenticationHasFailed(): void
     {
         $unauthorizedListener = new UnauthorizedListener();

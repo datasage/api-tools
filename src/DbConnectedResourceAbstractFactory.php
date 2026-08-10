@@ -7,9 +7,8 @@ namespace Laminas\ApiTools;
 use Laminas\ApiTools\Rest\Resource;
 use Laminas\Db\TableGateway\TableGatewayInterface;
 use Laminas\Paginator\Paginator;
-use Laminas\ServiceManager\AbstractFactoryInterface;
 use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
-use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\Factory\AbstractFactoryInterface;
 use Override;
 use Psr\Container\ContainerInterface;
 
@@ -53,21 +52,6 @@ class DbConnectedResourceAbstractFactory implements AbstractFactoryInterface
     }
 
     /**
-     * Can this factory create the requested service? (v2)
-     *
-     * Provided for backwards compatiblity; proxies to canCreate().
-     *
-     * @param string $name
-     * @param string $requestedName
-     * @return bool
-     */
-    #[Override]
-    public function canCreateServiceWithName(ServiceLocatorInterface $container, $name, $requestedName)
-    {
-        return $this->canCreate($container, $requestedName);
-    }
-
-    /**
      * Create and return the database-connected resource.
      *
      * @param string $requestedName
@@ -85,21 +69,6 @@ class DbConnectedResourceAbstractFactory implements AbstractFactoryInterface
         $resourceClass = $this->getResourceClassFromConfig($config, $requestedName);
 
         return new $resourceClass($table, $identifier, $collection);
-    }
-
-    /**
-     * Create and return the database-connected resource (v2).
-     *
-     * Provided for backwards compatibility; proxies to __invoke().
-     *
-     * @param string $name
-     * @param string $requestedName
-     * @return Resource
-     */
-    #[Override]
-    public function createServiceWithName(ServiceLocatorInterface $container, $name, $requestedName)
-    {
-        return $this($container, $requestedName);
     }
 
     /**

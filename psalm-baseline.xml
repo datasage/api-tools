@@ -85,9 +85,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[DbConnectedResourceAbstractFactory]]></code>
     </ClassMustBeFinal>
-    <DeprecatedInterface>
-      <code><![CDATA[DbConnectedResourceAbstractFactory]]></code>
-    </DeprecatedInterface>
     <InvalidStringClass>
       <code><![CDATA[new $resourceClass($table, $identifier, $collection)]]></code>
     </InvalidStringClass>
@@ -128,10 +125,6 @@
     <MoreSpecificReturnType>
       <code><![CDATA[Resource]]></code>
     </MoreSpecificReturnType>
-    <ParamNameMismatch>
-      <code><![CDATA[$container]]></code>
-      <code><![CDATA[$container]]></code>
-    </ParamNameMismatch>
   </file>
   <file src="src/Model/MongoConnectedListener.php">
     <ClassMustBeFinal>
@@ -228,9 +221,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[TableGatewayAbstractFactory]]></code>
     </ClassMustBeFinal>
-    <DeprecatedInterface>
-      <code><![CDATA[TableGatewayAbstractFactory]]></code>
-    </DeprecatedInterface>
     <InvalidStringClass>
       <code><![CDATA[new $entity()]]></code>
     </InvalidStringClass>
@@ -277,10 +267,6 @@
       <code><![CDATA[$container->get(AdapterInterface::class)]]></code>
       <code><![CDATA[$hydrators->get($hydratorName)]]></code>
     </MixedReturnStatement>
-    <ParamNameMismatch>
-      <code><![CDATA[$container]]></code>
-      <code><![CDATA[$container]]></code>
-    </ParamNameMismatch>
   </file>
   <file src="test/ApplicationTest.php">
     <ArgumentTypeCoercion>

@@ -103,39 +103,6 @@ you have two options:
 The top-level configuration key for user configuration of this module is
 `api-tools`.
 
-#### db-connected
-
-`db-connected` is an array of resources that can be built via the
-[TableGatewayAbstractFactory](#apitoolstablegatewayabstractfactory) and the
-[DbConnectedResourceAbstractFactory](#apitoolsdbconnectedresourceabstractfactory) when required
-to fulfill the use case of database table-driven resource use cases. The following example
-enumerates all of the required and optional configuration necessary to enable this.
-
-Example:
-
-```php
-'db-connected' => [
-    /**
-     * This is sample configuration for a DB-connected service.
-     * Each such service requires an adapter, a hydrator, an entity, and a
-     * collection.
-     *
-     * The TableGateway will be called "YourDBConnectedResource\Table" should
-     * you wish to retrieve it manually later.
-     */
-    'YourDBConnectedResource' => [
-        'table_service'    => 'Optional; if present, this service will be used as the table gateway',
-        'resource_class'   => 'Optional; if present, this class will be used as the db-connected resource',
-        'table_name'       => 'Name of DB table to use',
-        'identifier_name'  => 'Optional; identifier field in table; defaults to table_name_id or id',
-        'adapter_name'     => 'Service Name for DB adapter to use',
-        'hydrator_name'    => 'Service Name for Hydrator to use',
-        'entity_class'     => 'Name of entity class to which to hydrate',
-        'collection_class' => 'Name of collection class which iterates entities; should be a Paginator extension',
-    ],
-],
-```
-
 ### System Configuration
 
 The following configuration is required to ensure the proper functioning of this module in Laminas
@@ -144,7 +111,6 @@ Framework applications, and is provided by the module:
 ```php
 namespace Laminas\ApiTools;
 
-use Laminas\Db\Adapter\AdapterAbstractServiceFactory as DbAdapterAbstractServiceFactory;
 use Laminas\ServiceManager\Factory\InvokableFactory;
 
 return [
@@ -170,11 +136,6 @@ return [
         'factories' => [
             MvcAuth\UnauthenticatedListener::class => InvokableFactory::class,
             MvcAuth\UnauthorizedListener::class => InvokableFactory::class,
-        ],
-        'abstract_factories' => [
-            DbAdapterAbstractServiceFactory::class, // so that db-connected works "out-of-the-box"
-            DbConnectedResourceAbstractFactory::class,
-            TableGatewayAbstractFactory::class,
         ],
     ],
 ];
@@ -209,22 +170,4 @@ a rendering error occurs.
 
 ### Factories
 
-#### Laminas\ApiTools\DbConnectedResourceAbstractFactory
-
-This factory uses the requested name in addition to the `api-tools.db-connected` configuration
-in order to produce `Laminas\ApiTools\DbConnectedResource` based resources.
-
-#### Laminas\ApiTools\TableGatewayAbstractFactory
-
-This factory uses the requested name in addition to the `api-tools.db-connected` configuration
-in order to produce correctly configured `Laminas\Db\TableGateway\TableGateway` instances.  These
-instances of `TableGateway`s are configured to use the proper `HydratingResultSet` and produce
-the configured entities with each row returned when iterated.
-
 ### Models
-
-#### Laminas\ApiTools\DbConnectedResource
-
-This instance serves as the base class for database connected REST resource classes.  This
-implementation is an extension of `Laminas\ApiTools\Rest\AbstractResourceListener` and can be routed to by
-Laminas API Tools as a RESTful resource.

@@ -17,23 +17,11 @@
     </projectFiles>
 
     <issueHandlers>
-        <PossiblyUndefinedMethod>
-            <errorLevel type="suppress">
-                <directory name="test"/>
-            </errorLevel>
-        </PossiblyUndefinedMethod>
-
         <PossiblyInvalidMethodCall>
             <errorLevel type="suppress">
                 <directory name="test"/>
             </errorLevel>
         </PossiblyInvalidMethodCall>
-
-        <UndefinedInterfaceMethod>
-            <errorLevel type="suppress">
-                <referencedMethod name="Laminas\Db\ResultSet\ResultSetInterface::current"/>
-            </errorLevel>
-        </UndefinedInterfaceMethod>
     </issueHandlers>
 
     <plugins>

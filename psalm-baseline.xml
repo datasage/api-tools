@@ -33,66 +33,6 @@
       <code><![CDATA[Application]]></code>
     </PropertyNotSetInConstructor>
   </file>
-  <file src="src/Model/MongoConnectedListener.php">
-    <ClassMustBeFinal>
-      <code><![CDATA[MongoConnectedListener]]></code>
-    </ClassMustBeFinal>
-    <MixedArrayAccess>
-      <code><![CDATA[$collection['_id']]]></code>
-      <code><![CDATA[$result['_id']]]></code>
-    </MixedArrayAccess>
-    <MixedArrayAssignment>
-      <code><![CDATA[$result['_id']]]></code>
-    </MixedArrayAssignment>
-    <MixedArrayOffset>
-      <code><![CDATA[$result[$id]]]></code>
-    </MixedArrayOffset>
-    <MixedAssignment>
-      <code><![CDATA[$collection]]></code>
-      <code><![CDATA[$id]]></code>
-      <code><![CDATA[$result]]></code>
-      <code><![CDATA[$result]]></code>
-      <code><![CDATA[$result]]></code>
-      <code><![CDATA[$result[$id]]]></code>
-      <code><![CDATA[$rows]]></code>
-    </MixedAssignment>
-    <MixedReturnStatement>
-      <code><![CDATA[$result]]></code>
-    </MixedReturnStatement>
-    <MoreSpecificImplementedParamType>
-      <code><![CDATA[$data]]></code>
-      <code><![CDATA[$data]]></code>
-      <code><![CDATA[$id]]></code>
-      <code><![CDATA[$id]]></code>
-      <code><![CDATA[$id]]></code>
-    </MoreSpecificImplementedParamType>
-    <PossiblyUnusedParam>
-      <code><![CDATA[$collection]]></code>
-    </PossiblyUnusedParam>
-    <PropertyNotSetInConstructor>
-      <code><![CDATA[MongoConnectedListener]]></code>
-      <code><![CDATA[MongoConnectedListener]]></code>
-      <code><![CDATA[MongoConnectedListener]]></code>
-      <code><![CDATA[MongoConnectedListener]]></code>
-      <code><![CDATA[MongoConnectedListener]]></code>
-    </PropertyNotSetInConstructor>
-    <UndefinedClass>
-      <code><![CDATA[$e]]></code>
-      <code><![CDATA[MongoCollection]]></code>
-      <code><![CDATA[MongoException]]></code>
-      <code><![CDATA[MongoId]]></code>
-      <code><![CDATA[MongoId]]></code>
-      <code><![CDATA[MongoId]]></code>
-    </UndefinedClass>
-    <UndefinedDocblockClass>
-      <code><![CDATA[$this->collection]]></code>
-      <code><![CDATA[$this->collection]]></code>
-      <code><![CDATA[$this->collection]]></code>
-      <code><![CDATA[$this->collection]]></code>
-      <code><![CDATA[$this->collection]]></code>
-      <code><![CDATA[MongoCollection]]></code>
-    </UndefinedDocblockClass>
-  </file>
   <file src="src/Module.php">
     <ClassMustBeFinal>
       <code><![CDATA[Module]]></code>
@@ -163,45 +103,6 @@
       <code><![CDATA[$e]]></code>
       <code><![CDATA[$e]]></code>
     </UnusedClosureParam>
-  </file>
-  <file src="test/Model/MongoConnectedListenerTest.php">
-    <ClassMustBeFinal>
-      <code><![CDATA[MongoConnectedListenerTest]]></code>
-    </ClassMustBeFinal>
-    <MixedArrayAccess>
-      <code><![CDATA[$result['_id']]]></code>
-    </MixedArrayAccess>
-    <MixedAssignment>
-      <code><![CDATA[static::$mongoDb]]></code>
-    </MixedAssignment>
-    <MixedMethodCall>
-      <code><![CDATA[create]]></code>
-      <code><![CDATA[create]]></code>
-      <code><![CDATA[delete]]></code>
-      <code><![CDATA[fetch]]></code>
-      <code><![CDATA[fetchAll]]></code>
-      <code><![CDATA[patch]]></code>
-    </MixedMethodCall>
-    <MixedReturnStatement>
-      <code><![CDATA[$result['_id']]]></code>
-    </MixedReturnStatement>
-    <UndefinedClass>
-      <code><![CDATA[MongoClient]]></code>
-      <code><![CDATA[MongoDB]]></code>
-    </UndefinedClass>
-    <UndefinedDocblockClass>
-      <code><![CDATA[MongoDB]]></code>
-    </UndefinedDocblockClass>
-    <UndefinedThisPropertyAssignment>
-      <code><![CDATA[$this->mongoListener]]></code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch>
-      <code><![CDATA[$this->mongoListener]]></code>
-      <code><![CDATA[$this->mongoListener]]></code>
-      <code><![CDATA[$this->mongoListener]]></code>
-      <code><![CDATA[$this->mongoListener]]></code>
-      <code><![CDATA[$this->mongoListener]]></code>
-    </UndefinedThisPropertyFetch>
   </file>
   <file src="test/MvcAuth/UnauthorizedListenerTest.php">
     <ClassMustBeFinal>

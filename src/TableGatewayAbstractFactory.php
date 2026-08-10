@@ -9,9 +9,8 @@ use Laminas\Db\Adapter\AdapterInterface;
 use Laminas\Db\ResultSet\HydratingResultSet;
 use Laminas\Db\TableGateway\TableGateway;
 use Laminas\Hydrator\HydratorInterface;
-use Laminas\ServiceManager\AbstractFactoryInterface;
 use Laminas\ServiceManager\Exception\ServiceNotCreatedException;
-use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\Factory\AbstractFactoryInterface;
 use Override;
 use Psr\Container\ContainerInterface;
 use stdClass;
@@ -63,21 +62,6 @@ class TableGatewayAbstractFactory implements AbstractFactoryInterface
     }
 
     /**
-     * Can this factory create the requested table gateway? (v2)
-     *
-     * Provided for backwards compatibility; proxies to canCreate().
-     *
-     * @param string $name
-     * @param string $requestedName
-     * @return bool
-     */
-    #[Override]
-    public function canCreateServiceWithName(ServiceLocatorInterface $container, $name, $requestedName)
-    {
-        return $this->canCreate($container, $requestedName);
-    }
-
-    /**
      * Create and return the requested table gateway instance.
      *
      * @param string $requestedName
@@ -107,21 +91,6 @@ class TableGatewayAbstractFactory implements AbstractFactoryInterface
 
         $resultSetPrototype = new HydratingResultSet($hydrator, new $entity());
         return new TableGateway($table, $adapter, null, $resultSetPrototype);
-    }
-
-    /**
-     * Create and return the requested table gateway instance (v2).
-     *
-     * Provided for backwards compatibility; proxies to __invoke().
-     *
-     * @param string $name
-     * @param string $requestedName
-     * @return TableGateway
-     */
-    #[Override]
-    public function createServiceWithName(ServiceLocatorInterface $container, $name, $requestedName)
-    {
-        return $this($container, $requestedName);
     }
 
     /**

@@ -33,99 +33,6 @@
       <code><![CDATA[Application]]></code>
     </PropertyNotSetInConstructor>
   </file>
-  <file src="src/DbConnectedResource.php">
-    <ArgumentTypeCoercion>
-      <code><![CDATA[$this->table]]></code>
-    </ArgumentTypeCoercion>
-    <ClassMustBeFinal>
-      <code><![CDATA[DbConnectedResource]]></code>
-    </ClassMustBeFinal>
-    <DeprecatedClass>
-      <code><![CDATA[new TableGatewayPaginator($this->table)]]></code>
-    </DeprecatedClass>
-    <InvalidStringClass>
-      <code><![CDATA[new $this->collectionClass($adapter)]]></code>
-    </InvalidStringClass>
-    <LessSpecificReturnStatement>
-      <code><![CDATA[new $this->collectionClass($adapter)]]></code>
-    </LessSpecificReturnStatement>
-    <MixedReturnStatement>
-      <code><![CDATA[$filter->getValues()]]></code>
-      <code><![CDATA[$resultSet->current()]]></code>
-    </MixedReturnStatement>
-    <MixedReturnTypeCoercion>
-      <code><![CDATA[(array) $data]]></code>
-    </MixedReturnTypeCoercion>
-    <MoreSpecificImplementedParamType>
-      <code><![CDATA[$data]]></code>
-      <code><![CDATA[$data]]></code>
-      <code><![CDATA[$data]]></code>
-      <code><![CDATA[$id]]></code>
-      <code><![CDATA[$id]]></code>
-      <code><![CDATA[$id]]></code>
-      <code><![CDATA[$id]]></code>
-    </MoreSpecificImplementedParamType>
-    <MoreSpecificReturnType>
-      <code><![CDATA[Paginator]]></code>
-    </MoreSpecificReturnType>
-    <ParamNameMismatch>
-      <code><![CDATA[$data]]></code>
-    </ParamNameMismatch>
-    <PropertyNotSetInConstructor>
-      <code><![CDATA[DbConnectedResource]]></code>
-      <code><![CDATA[DbConnectedResource]]></code>
-      <code><![CDATA[DbConnectedResource]]></code>
-      <code><![CDATA[DbConnectedResource]]></code>
-    </PropertyNotSetInConstructor>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[getLastInsertValue]]></code>
-    </UndefinedInterfaceMethod>
-  </file>
-  <file src="src/DbConnectedResourceAbstractFactory.php">
-    <ClassMustBeFinal>
-      <code><![CDATA[DbConnectedResourceAbstractFactory]]></code>
-    </ClassMustBeFinal>
-    <InvalidStringClass>
-      <code><![CDATA[new $resourceClass($table, $identifier, $collection)]]></code>
-    </InvalidStringClass>
-    <LessSpecificReturnStatement>
-      <code><![CDATA[new $resourceClass($table, $identifier, $collection)]]></code>
-    </LessSpecificReturnStatement>
-    <MixedArgument>
-      <code><![CDATA[$collection]]></code>
-      <code><![CDATA[$collection]]></code>
-      <code><![CDATA[$config]]></code>
-      <code><![CDATA[$config['table_service']]]></code>
-      <code><![CDATA[$config['table_service']]]></code>
-      <code><![CDATA[$resourceClass]]></code>
-      <code><![CDATA[$resourceClass]]></code>
-    </MixedArgument>
-    <MixedArrayAccess>
-      <code><![CDATA[$config['api-tools']]]></code>
-      <code><![CDATA[$config['api-tools']]]></code>
-      <code><![CDATA[$config['api-tools']['db-connected']]]></code>
-      <code><![CDATA[$config['api-tools']['db-connected']]]></code>
-      <code><![CDATA[$config['api-tools']['db-connected'][$requestedName]]]></code>
-    </MixedArrayAccess>
-    <MixedAssignment>
-      <code><![CDATA[$config]]></code>
-      <code><![CDATA[$config]]></code>
-      <code><![CDATA[$config]]></code>
-      <code><![CDATA[$config]]></code>
-    </MixedAssignment>
-    <MixedOperand>
-      <code><![CDATA[$config['table_name']]]></code>
-    </MixedOperand>
-    <MixedReturnStatement>
-      <code><![CDATA[$config['entity_identifier_name']]]></code>
-      <code><![CDATA[$config['identifier_name']]]></code>
-      <code><![CDATA[$container->get($config['table_service'])]]></code>
-      <code><![CDATA[$container->get($tableGatewayService)]]></code>
-    </MixedReturnStatement>
-    <MoreSpecificReturnType>
-      <code><![CDATA[Resource]]></code>
-    </MoreSpecificReturnType>
-  </file>
   <file src="src/Model/MongoConnectedListener.php">
     <ClassMustBeFinal>
       <code><![CDATA[MongoConnectedListener]]></code>
@@ -217,57 +124,6 @@
       <code><![CDATA[UnauthorizedListener]]></code>
     </ClassMustBeFinal>
   </file>
-  <file src="src/TableGatewayAbstractFactory.php">
-    <ClassMustBeFinal>
-      <code><![CDATA[TableGatewayAbstractFactory]]></code>
-    </ClassMustBeFinal>
-    <InvalidStringClass>
-      <code><![CDATA[new $entity()]]></code>
-    </InvalidStringClass>
-    <MixedArgument>
-      <code><![CDATA[$config['adapter_name']]]></code>
-      <code><![CDATA[$config['adapter_name']]]></code>
-      <code><![CDATA[$config['adapter_name']]]></code>
-      <code><![CDATA[$dbConnectedConfig]]></code>
-      <code><![CDATA[$entity]]></code>
-      <code><![CDATA[$entity]]></code>
-      <code><![CDATA[$restConfig]]></code>
-      <code><![CDATA[$table]]></code>
-    </MixedArgument>
-    <MixedArrayAccess>
-      <code><![CDATA[$config['api-tools']]]></code>
-      <code><![CDATA[$config['api-tools']]]></code>
-      <code><![CDATA[$config['api-tools']['db-connected']]]></code>
-      <code><![CDATA[$config['api-tools']['db-connected']]]></code>
-      <code><![CDATA[$config['api-tools']['db-connected'][$gatewayName]]]></code>
-      <code><![CDATA[$config['api-tools-rest'][$dbConnectedConfig['controller_service_name']]]]></code>
-      <code><![CDATA[$dbConnectedConfig['table_name']]]></code>
-    </MixedArrayAccess>
-    <MixedArrayOffset>
-      <code><![CDATA[$config['api-tools-rest'][$dbConnectedConfig['controller_service_name']]]]></code>
-      <code><![CDATA[$config['api-tools-rest'][$dbConnectedConfig['controller_service_name']]]]></code>
-    </MixedArrayOffset>
-    <MixedAssignment>
-      <code><![CDATA[$config]]></code>
-      <code><![CDATA[$config]]></code>
-      <code><![CDATA[$config]]></code>
-      <code><![CDATA[$dbConnectedConfig]]></code>
-      <code><![CDATA[$hydratorName]]></code>
-      <code><![CDATA[$hydrators]]></code>
-      <code><![CDATA[$restConfig]]></code>
-      <code><![CDATA[$restConfig]]></code>
-      <code><![CDATA[$table]]></code>
-    </MixedAssignment>
-    <MixedMethodCall>
-      <code><![CDATA[get]]></code>
-    </MixedMethodCall>
-    <MixedReturnStatement>
-      <code><![CDATA[$container->get($config['adapter_name'])]]></code>
-      <code><![CDATA[$container->get(Adapter::class)]]></code>
-      <code><![CDATA[$container->get(AdapterInterface::class)]]></code>
-      <code><![CDATA[$hydrators->get($hydratorName)]]></code>
-    </MixedReturnStatement>
-  </file>
   <file src="test/ApplicationTest.php">
     <ArgumentTypeCoercion>
       <code><![CDATA[$request->reveal()]]></code>
@@ -307,107 +163,6 @@
       <code><![CDATA[$e]]></code>
       <code><![CDATA[$e]]></code>
     </UnusedClosureParam>
-  </file>
-  <file src="test/DbConnectedResourceAbstractFactoryTest.php">
-    <ClassMustBeFinal>
-      <code><![CDATA[DbConnectedResourceAbstractFactoryTest]]></code>
-    </ClassMustBeFinal>
-    <InvalidMethodCall>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-    </InvalidMethodCall>
-    <MixedMethodCall>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-    </MixedMethodCall>
-    <MixedReturnStatement>
-      <code><![CDATA[array]]></code>
-    </MixedReturnStatement>
-    <UndefinedMagicMethod>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-    </UndefinedMagicMethod>
-  </file>
-  <file src="test/DbConnectedResourceTest.php">
-    <ClassMustBeFinal>
-      <code><![CDATA[DbConnectedResourceTest]]></code>
-    </ClassMustBeFinal>
-    <InvalidMethodCall>
-      <code><![CDATA[shouldBeCalled]]></code>
-      <code><![CDATA[shouldBeCalled]]></code>
-      <code><![CDATA[shouldBeCalled]]></code>
-      <code><![CDATA[willReturn]]></code>
-    </InvalidMethodCall>
-    <MixedMethodCall>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-    </MixedMethodCall>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-    </UndefinedInterfaceMethod>
-    <UndefinedMagicMethod>
-      <code><![CDATA[count]]></code>
-      <code><![CDATA[count]]></code>
-      <code><![CDATA[count]]></code>
-      <code><![CDATA[current]]></code>
-      <code><![CDATA[current]]></code>
-      <code><![CDATA[current]]></code>
-      <code><![CDATA[getLastInsertValue]]></code>
-      <code><![CDATA[getValues]]></code>
-      <code><![CDATA[getValues]]></code>
-      <code><![CDATA[getValues]]></code>
-      <code><![CDATA[insert]]></code>
-      <code><![CDATA[select]]></code>
-      <code><![CDATA[select]]></code>
-      <code><![CDATA[select]]></code>
-      <code><![CDATA[update]]></code>
-      <code><![CDATA[update]]></code>
-    </UndefinedMagicMethod>
   </file>
   <file src="test/Model/MongoConnectedListenerTest.php">
     <ClassMustBeFinal>
@@ -453,123 +208,21 @@
       <code><![CDATA[UnauthorizedListenerTest]]></code>
     </ClassMustBeFinal>
   </file>
-  <file src="test/TableGatewayAbstractFactoryTest.php">
-    <ArgumentTypeCoercion>
-      <code><![CDATA[$expectedClassName]]></code>
-    </ArgumentTypeCoercion>
-    <ClassMustBeFinal>
-      <code><![CDATA[TableGatewayAbstractFactoryTest]]></code>
-    </ClassMustBeFinal>
-    <DeprecatedClass>
-      <code><![CDATA[ClassMethods::class]]></code>
-    </DeprecatedClass>
-    <InvalidMethodCall>
-      <code><![CDATA[shouldNotBeCalled]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-    </InvalidMethodCall>
-    <LessSpecificReturnStatement>
-      <code><![CDATA[[
-            'named_adapter'   => ['Db\NamedAdapter'],
-            'default_adapter' => [DbAdapter::class],
-        ]]]></code>
-    </LessSpecificReturnStatement>
-    <MixedMethodCall>
-      <code><![CDATA[shouldNotBeCalled]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-      <code><![CDATA[willReturn]]></code>
-    </MixedMethodCall>
-    <MoreSpecificReturnType>
-      <code><![CDATA[array<string, array{0: class-string}>]]></code>
-    </MoreSpecificReturnType>
-    <UndefinedMagicMethod>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[get]]></code>
-      <code><![CDATA[getName]]></code>
-      <code><![CDATA[getName]]></code>
-      <code><![CDATA[getPlatform]]></code>
-      <code><![CDATA[getPlatform]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-      <code><![CDATA[has]]></code>
-    </UndefinedMagicMethod>
-  </file>
   <file src="test/TestAsset/Bar.php">
     <ClassMustBeFinal>
       <code><![CDATA[Bar]]></code>
     </ClassMustBeFinal>
+    <UnusedClass>
+      <code><![CDATA[Bar]]></code>
+    </UnusedClass>
   </file>
   <file src="test/TestAsset/Foo.php">
     <ClassMustBeFinal>
       <code><![CDATA[Foo]]></code>
     </ClassMustBeFinal>
+    <UnusedClass>
+      <code><![CDATA[Foo]]></code>
+    </UnusedClass>
   </file>
   <file src="test/TestAsset/Foo_Bar.php">
     <ClassMustBeFinal>

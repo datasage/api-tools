@@ -16,14 +16,6 @@
         </ignoreFiles>
     </projectFiles>
 
-    <issueHandlers>
-        <PossiblyInvalidMethodCall>
-            <errorLevel type="suppress">
-                <directory name="test"/>
-            </errorLevel>
-        </PossiblyInvalidMethodCall>
-    </issueHandlers>
-
     <plugins>
         <pluginClass class="Psalm\PhpUnitPlugin\Plugin"/>
     </plugins>
